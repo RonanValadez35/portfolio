@@ -1,4 +1,18 @@
-export function Header() {
+type HeaderProps = {
+  bankroll: number;
+};
+
+const currencyFormatter = new Intl.NumberFormat("en-US", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
+const compactCurrencyFormatter = new Intl.NumberFormat("en-US", {
+  notation: "compact",
+  maximumFractionDigits: 1,
+});
+
+export function Header({ bankroll }: HeaderProps) {
   return (
     <>
       <header className="site-header">
@@ -12,12 +26,18 @@ export function Header() {
         </nav>
       </header>
 
-      <output className="currency-balance" aria-label="Current bankroll: 12,450 dollars">
+      <output
+        className="currency-balance"
+        aria-label={`Current bankroll: ${currencyFormatter.format(bankroll)} dollars`}
+        aria-live="polite"
+      >
         <span className="currency-balance__mark" aria-hidden="true">$</span>
         <span className="currency-balance__copy">
           <span className="currency-balance__label">Bankroll</span>
-          <strong className="currency-balance__amount">12,450.00</strong>
-          <strong className="currency-balance__amount-short" aria-hidden="true">12.4K</strong>
+          <strong className="currency-balance__amount">{currencyFormatter.format(bankroll)}</strong>
+          <strong className="currency-balance__amount-short" aria-hidden="true">
+            {compactCurrencyFormatter.format(bankroll)}
+          </strong>
         </span>
       </output>
     </>

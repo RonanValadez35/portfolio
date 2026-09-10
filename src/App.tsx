@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Bio } from "./components/Bio";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -6,12 +7,14 @@ import { Roulette } from "./components/Roulette";
 import { WorkExperience } from "./components/WorkExperience";
 
 export default function App() {
+  const [bankroll, setBankroll] = useState(12_450);
+
   return (
     <div className="site-shell">
-      <Header />
+      <Header bankroll={bankroll} />
       <main id="top">
         <Bio />
-        <Roulette />
+        <Roulette bankroll={bankroll} setBankroll={setBankroll} />
         <WorkExperience />
         <Projects />
       </main>
