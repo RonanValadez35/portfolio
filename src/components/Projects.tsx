@@ -6,8 +6,7 @@ const projects = [
     description:
       "A multithreaded C++20 inference service with an asynchronous job API, a custom thread pool, Ollama integration, and durable PostgreSQL job processing. The redesign doubled concurrent throughput and added crash recovery.",
     tags: ["C++20", "PostgreSQL", "Crow", "Ollama"],
-    accent: "oxblood",
-    suit: "♠",
+    accent: "violet",
   },
   {
     number: "02",
@@ -16,8 +15,7 @@ const projects = [
     description:
       "A five-stage pipelined RISC-V processor built in SystemVerilog for a Basys3 FPGA, including hazard detection, data forwarding, and verification through Vivado simulation and timing analysis.",
     tags: ["SystemVerilog", "RISC-V", "Basys3 FPGA", "Vivado"],
-    accent: "gold",
-    suit: "♥",
+    accent: "lavender",
   },
   {
     number: "03",
@@ -26,8 +24,7 @@ const projects = [
     description:
       "A production-style ticket management platform with account creation, sign-in, ticket ownership, and complete create, edit, and delete workflows backed by tested API endpoints.",
     tags: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
-    accent: "black",
-    suit: "♣",
+    accent: "plum",
     url: "https://github.com/RonanValadez35/Ticket_Board",
   },
   {
@@ -37,8 +34,7 @@ const projects = [
     description:
       "A Python pipeline that gathers and deduplicates stock news, uses Ollama to create ticker-specific summaries and key points, formats the result, and delivers the briefing by email.",
     tags: ["Python", "Ollama", "EODHD API", "PyTest"],
-    accent: "felt",
-    suit: "♦",
+    accent: "iris",
     url: "https://github.com/RonanValadez35/stock_project",
   },
 ];
@@ -66,7 +62,6 @@ export function Projects() {
               className={`project-visual ${project.accent}`}
               aria-hidden="true"
             >
-              <span className="project-suit">{project.suit}</span>
               <div className="visual-window">
                 <div className="visual-bar">
                   <span />

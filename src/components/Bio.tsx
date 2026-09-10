@@ -24,8 +24,8 @@ export function Bio() {
       </div>
       <a
         className="scroll-cue"
-        href="#roulette"
-        aria-label="Scroll to roulette game"
+        href="#experience"
+        aria-label="Scroll to experience"
       >
         <span>Scroll to explore</span>
         <span aria-hidden="true">↓</span>
