@@ -7,6 +7,8 @@ const projects = [
       "A multithreaded C++20 inference service with an asynchronous job API, a custom thread pool, Ollama integration, and durable PostgreSQL job processing. The redesign doubled concurrent throughput and added crash recovery.",
     tags: ["C++20", "PostgreSQL", "Crow", "Ollama"],
     accent: "violet",
+    video: "/videos/prompt-engine-demo.mov",
+    url: "https://github.com/RonanValadez35/PromptEngine",
   },
   {
     number: "02",
@@ -16,15 +18,19 @@ const projects = [
       "A five-stage pipelined RISC-V processor built in SystemVerilog for a Basys3 FPGA, including hazard detection, data forwarding, and verification through Vivado simulation and timing analysis.",
     tags: ["SystemVerilog", "RISC-V", "Basys3 FPGA", "Vivado"],
     accent: "lavender",
+    image: "/images/cpu_image.jpg",
+    imageAlt: "Close-up of a processor on a circuit board",
   },
   {
     number: "03",
     name: "Ticket_Board",
     category: "Full-Stack Web Application",
     description:
-      "A production-style ticket management platform with account creation, sign-in, ticket ownership, and complete create, edit, and delete workflows backed by tested API endpoints.",
+      "A Kanban-style ticket tracker with drag-and-drop workflows, claimable ticket ownership, and optimistic updates with automatic rollback. A FastAPI backend secures every mutation with revocable sessions and server-side authorization.",
     tags: ["React", "TypeScript", "FastAPI", "PostgreSQL"],
     accent: "plum",
+    video: "/videos/ticket_demo_cut.mov",
+    videoFit: "contain",
     url: "https://github.com/RonanValadez35/Ticket_Board",
   },
   {
@@ -33,8 +39,10 @@ const projects = [
     category: "Automation / AI Summarization",
     description:
       "A Python pipeline that gathers and deduplicates stock news, uses Ollama to create ticker-specific summaries and key points, formats the result, and delivers the briefing by email.",
-    tags: ["Python", "Ollama", "EODHD API", "PyTest"],
+    tags: ["Python", "Ollama", "Few Shot Prompting"],
     accent: "iris",
+    video: "/videos/stock-email-demo.mov",
+    videoFit: "contain",
     url: "https://github.com/RonanValadez35/stock_project",
   },
 ];
@@ -48,7 +56,7 @@ export function Projects() {
     >
       <div className="section-heading project-heading">
         <div>
-          <p className="section-number">02 / Selected projects</p>
+          <p className="section-number">03 / Selected projects</p>
           <h2 id="projects-title">A few things I’ve made</h2>
         </div>
         <p className="heading-note">
@@ -58,25 +66,56 @@ export function Projects() {
       <div className="project-grid">
         {projects.map((project) => (
           <article className="project-card" key={project.name}>
-            <div
-              className={`project-visual ${project.accent}`}
-              aria-hidden="true"
-            >
-              <div className="visual-window">
-                <div className="visual-bar">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <div className="visual-copy">
-                  <span className="visual-kicker">{project.category}</span>
-                  <strong>{project.name}</strong>
-                  <span className="visual-line long" />
-                  <span className="visual-line" />
-                </div>
+            {project.video ? (
+              <div
+                className={`project-visual project-video-frame${
+                  project.videoFit === "contain" ? " contain" : ""
+                }`}
+              >
+                <video
+                  className={`project-video${
+                    project.videoFit === "contain" ? " contain" : ""
+                  }`}
+                  src={project.video}
+                  aria-label={`${project.name} application demo`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+                <span className="project-number">{project.number}</span>
               </div>
-              <span className="project-number">{project.number}</span>
-            </div>
+            ) : project.image ? (
+              <div className="project-visual project-image-frame">
+                <img
+                  className="project-image"
+                  src={project.image}
+                  alt={project.imageAlt}
+                />
+                <span className="project-number">{project.number}</span>
+              </div>
+            ) : (
+              <div
+                className={`project-visual ${project.accent}`}
+                aria-hidden="true"
+              >
+                <div className="visual-window">
+                  <div className="visual-bar">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="visual-copy">
+                    <span className="visual-kicker">{project.category}</span>
+                    <strong>{project.name}</strong>
+                    <span className="visual-line long" />
+                    <span className="visual-line" />
+                  </div>
+                </div>
+                <span className="project-number">{project.number}</span>
+              </div>
+            )}
             <div className="project-content">
               <p className="project-category">{project.category}</p>
               <h3>{project.name}</h3>

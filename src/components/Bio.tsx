@@ -4,23 +4,16 @@ export function Bio() {
   return (
     <section className="hero" id="bio" aria-labelledby="intro-title">
       <div className="hero-orb" aria-hidden="true" />
-      <div className="eyebrow">
-        <span /> Hello, I’m Ronan
-      </div>
       <h1 id="intro-title">
-        I build digital things
+        Hello I'm Ronan
         <br />
-        <em>with care.</em>
       </h1>
       <div className="bio-row">
         <p>
-          I’m a developer who enjoys turning complex ideas into clear, useful
-          experiences. I care about the small details, the people using what I
-          build, and learning something new along the way.
+          I’m a new grad developer with an interest in backend and Fullstack engineering. My prefered
+          programing languages are Python and C++ for backend. Beyond software, this site is a glimpse into who 
+          I am, such as my experiences related to software engineering, and other interest.
         </p>
-        <a className="text-link" href="mailto:hello@example.com">
-          Let’s work together <ArrowIcon />
-        </a>
       </div>
       <a
         className="scroll-cue"
