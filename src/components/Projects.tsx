@@ -60,9 +60,6 @@ export function Projects() {
           <p className="section-number">03 / Selected projects</p>
           <h2 id="projects-title">A few things I’ve made</h2>
         </div>
-        <p className="heading-note">
-          A small selection of product work, experiments, and ideas.
-        </p>
       </div>
       <div className="project-grid">
         {projects.map((project) => (
