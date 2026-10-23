@@ -1,7 +1,7 @@
 const projects = [
   {
     number: "01",
-    name: "PromptEngine",
+    name: "Prompt Engine",
     category: "Concurrent Systems / AI",
     description:
       "A multithreaded C++20 inference service with an asynchronous job API, a custom thread pool, Ollama integration, and durable PostgreSQL job processing. The redesign doubled concurrent throughput and added crash recovery.",
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     number: "03",
-    name: "Ticket_Board",
+    name: "Ticket Board",
     category: "Full-Stack Web Application",
     description:
       "A Kanban-style ticket tracker with drag-and-drop workflows, claimable ticket ownership, and optimistic updates with automatic rollback. A FastAPI backend secures every mutation with revocable sessions and server-side authorization.",
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     number: "04",
-    name: "stock_project",
+    name: "Stock Reporter",
     category: "Automation / AI Summarization",
     description:
       "A Python pipeline that gathers stock news, uses Ollama to create ticker-specific summaries and key points, formats the result, and delivers the briefing by email.",

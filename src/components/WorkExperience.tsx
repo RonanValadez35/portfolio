@@ -7,49 +7,47 @@ const experience = [
     description: (
       <>
       <p>
-      This was a major milestone in my career, learning, and life. I gained many new life experiences from Amazon that I had never experienced before. Examples
-      include flying on a plane, leaving California, staying in an Air BNB, and being in Texas. I remember everyone I spoke to telling me that the heat and humidity 
-      was going to be unbearable, but when I got there it was not that bad. Some context, the previous summer I worked for a wedding company, and part of my work entailed 
-      setting up the ceremony, which was held on the beach in Southern California. So I was carrying chairs, and parts for the stage on sand in 100 degree weather. So anything
-      was basically better than that.
+      This was a major milestone in my career, education, and personal life. My internship at Amazon gave me many new life experiences. Examples
+      include flying on a plane, leaving California, staying in an Airbnb, and being in Texas. I remember everyone I spoke to telling me that the heat and humidity 
+      were going to be unbearable, but when I got there, it wasn't that bad. For some context, the previous summer, I worked for a wedding company, and part of my 
+      work entailed setting up ceremonies held on beaches in Southern California. I was carrying chairs and stage components across the sand in 100 degree weather.
       </p>
       <p>
-      I had trouble with my internship prior to the start, I ordered my laptop to my house a month in advanced, but it did not arrive until I boarded my flight. I emailed my
-      manager during my layover and he ended up shipping my laptop to my house in Austin, and told me to not come in to the office till I recieved it. I ended up recieving
-      it the Saturday before my scheduled start date and emailed my manager I got laptop but he did not reply. So following Amazon's leadership princple I decided to 
-      have a bias for action and show up to the office on my original start date. Luckily my roommate was interning at Amazon, for a different team, and he showed me where
-      to go to get my blue badge. My mentor ended up contacting me halfway through the day and then brought me to a different building where the team was. 
-
+      I had trouble with my internship before it even started. I ordered my laptop to my house a month in advance, but it didn't arrive until I boarded my flight. I emailed my 
+      manager during my layover, and he ended up shipping my laptop to my house in Austin. He told me not to come into the office until I received it. I ended up receiving it the 
+      Saturday before my scheduled start date and emailed my manager to let him know I got my laptop, but he was on vactation and didn't reply. So, following Amazon's Leadership 
+      Principle of Bias for Action, I decided to show up at the office on my original start date. Luckily, my roommate was interning at Amazon on a different team, 
+      and he showed me where to go to get my blue badge. My mentor eventually contacted me halfway through the day and brought me to a different building where my team was located.
       </p>
       </>
     )
   },
   {
     period: "January 2023 — September 2023",
-    title: "Electrical & Software Intern at Dos Pueblos Engineering Academy(DPEA)",
+    title: "Electrical & Software Intern at Dos Pueblos Engineering Academy (DPEA)",
     image: "/images/dpea-workshop.jpg",
     imageAlt: "The hands-on engineering workshop at Dos Pueblos High School",
     description:
       (
         <>
         <p>
-          I was fortunate enough where my high school had a stellar engineering program where students would enroll in a class every year,
-          and senior year they would enroll in a minimum of two engineering classes working on their senior project. During senior year you can be
-          put into three seperate groups: manufacturing, product and design, and lastly electrical and software. My senior year I decided to go with
-          product and design even though I was split between that and the electrical and software team. Sadly all great things come to an end, and COVID struck,
-          ending my senior year of high school. I never got to finish my senior project, but it was not the end of my relationship with the DPEA.
+          I was fortunate enough to attend a high school with a stellar engineering program where students enrolled in an engineering class every year. 
+          During their senior year, students enrolled in at least two engineering classes while working on their senior projects. During senior year, students 
+          could join one of three separate groups: manufacturing, product and design, or electrical and software. I decided to go with
+          product and design my senior year, even though I was split between that and the electrical and software team. Sadly, all great things come to an end, 
+          and COVID struck, cutting my senior year of high school short. I never got to finish my senior project, but it was not the end of my relationship with the DPEA.
         </p>
         <p>
-          If DPEA alumni attened Santa Barbara City College, they were allowed to come back and work for the DPEA as a paid intern. Sadly because of COVID, I had to
-          wait three whole years after I had graduated to start working. As an intern, I was placed in the electrical and software team where I worked on a variety
-          of different tasks. I touched anything from soldering electrical components to pcbs, to shrink wrapping wires, to coding arduino boards and raspberry pis in Python.
-          As an alumni I was also asked to use my other skills that I gained in the academy such as machining on industrial grade lathes and mills, using solid works to make 
-          models of parts and projects, and writing technical documentation on how to use a new laser cutter.
-          It wasn't until about a month in that I got a larger project, one could say this was my actual intern project that you would see at any regular internship.
+          DPEA alumni who attended Santa Barbara City College were eligible to return to DPEA as paid interns. Sadly because of COVID, I had to
+          wait three whole years after I had graduated to start working. As an intern, I was placed on the electrical and software team, where I worked on a variety of tasks.
+          I worked on everything from soldering electrical components to PCBs and shrink-wrapping wires to programming Arduino boards and Raspberry Pis.
+          As an almuni, I was also asked to use other skills I had gained in the academy, such as machining on industrial-grade lathes and mills, using SolidWorks to 
+          model parts and projects, and writing technical documentation on how to use a new laser cutter.
+          It wasn't until about a month into my internship that I received a larger project. One could say this was my first traditional internship project.
         </p>
         <p>
-          Generally seniors that join the electrical and software team have zero experience with coding in Python. The DPEA teaches coding with arduino in C++, and maybe some
-          students come in knowing Java after taking AP Computer Science
+          Generally seniors that join the electrical and software team have zero experience with coding in Python. The DPEA teaches programming with Arduino in C++, 
+          and some students may already know Java from taking AP Computer Science.
         </p>
         </>
       )
