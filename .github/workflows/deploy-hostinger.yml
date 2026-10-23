@@ -86,5 +86,5 @@ jobs:
             -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$RUNNER_TEMP/hostinger_known_hosts" \
-            dist/. \
+            dist/* \
             "${HOSTINGER_USERNAME}@${HOSTINGER_HOST}:${HOSTINGER_DEPLOY_PATH%/}/"
