@@ -75,14 +75,13 @@ jobs:
         run: |
           set -euo pipefail
 
-          SSH_COMMAND="ssh -p ${HOSTINGER_PORT} -i ${RUNNER_TEMP}/hostinger_deploy_key -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=${RUNNER_TEMP}/hostinger_known_hosts"
-
-          rsync \
-            --archive \
-            --compress \
-            --delay-updates \
-            --partial \
-            --itemize-changes \
-            -e "$SSH_COMMAND" \
-            dist/ \
+          scp \
+            -r \
+            -P "$HOSTINGER_PORT" \
+            -i "$RUNNER_TEMP/hostinger_deploy_key" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o "UserKnownHostsFile=$RUNNER_TEMP/hostinger_known_hosts" \
+            dist/. \
             "${HOSTINGER_USERNAME}@${HOSTINGER_HOST}:${HOSTINGER_DEPLOY_PATH%/}/"

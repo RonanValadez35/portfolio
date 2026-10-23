@@ -21,7 +21,7 @@ Upload the contents of the generated `dist` folder to Hostinger's `public_html` 
 
 The GitHub Actions workflow in `.github/workflows/deploy-hostinger.yml` builds and deploys the site whenever a commit is pushed to `main`. It can also be run manually from the repository's **Actions** tab.
 
-The deployment uses SSH and `rsync`, so the Hostinger plan must include SSH access (Premium Web Hosting or higher). In Hostinger, enable SSH under **Websites → Dashboard → Advanced → SSH Access**.
+The deployment uses SSH/SCP, so the Hostinger plan must include SSH access (Premium Web Hosting or higher). In Hostinger, enable SSH under **Websites → Dashboard → Advanced → SSH Access**.
 
 ### 1. Create a deployment key
 
