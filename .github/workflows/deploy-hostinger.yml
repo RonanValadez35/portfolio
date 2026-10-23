@@ -75,7 +75,10 @@ jobs:
         run: |
           set -euo pipefail
 
+          # Hostinger exposes the deploy path through its SSH shell, while the
+          # default SFTP mode in newer OpenSSH clients cannot canonicalize it.
           scp \
+            -O \
             -r \
             -P "$HOSTINGER_PORT" \
             -i "$RUNNER_TEMP/hostinger_deploy_key" \
