@@ -3,7 +3,15 @@ const experience = [
     period: "June 2025 — September 2025",
     title: "Software Engineer Intern at Amazon",
     image: "/images/AUS16.jpeg",
-    imageAlt: "The glass Amazon Spheres at the company’s Seattle campus",
+    imageAlt: "Amazon office building in Austin, Texas",
+    summary:
+      "Designed and built a Slack-integrated RAG chatbot intended to reduce repetitive support questions for an internal security team.",
+    highlights: [
+      "Designed the project architecture and presented a formal design document to the team.",
+      "Integrated Slack with an AWS-based retrieval system while keeping the architecture extensible for a future ticketing integration.",
+      "Delivered a successful proof-of-concept demonstration that the team planned to continue toward production.",
+    ],
+    tags: ["Python", "AWS Lambda", "Slack API", "RAG", "CloudWatch"],
     description: (
       <>
       <p>
@@ -73,6 +81,14 @@ const experience = [
     title: "Electrical & Software Intern at Dos Pueblos Engineering Academy (DPEA)",
     image: "/images/dpea-workshop.jpg",
     imageAlt: "The hands-on engineering workshop at Dos Pueblos High School",
+    summary:
+      "Built a software tool that helped high school engineering students understand and program the components used in their senior projects.",
+    highlights: [
+      "Developed a Scratch like application for controlling and demonstrating electrical components.",
+      "Programmed Arduino boards, Raspberry Pis, motors, and other project hardware.",
+      "Worked across soldering, PCB assembly, machining, SolidWorks, and technical documentation.",
+    ],
+    tags: ["Python", "C++", "Arduino", "Raspberry Pi", "SolidWorks"],
     description:
       (
         <>
@@ -136,7 +152,24 @@ export function WorkExperience() {
             </div>
             <h3>{item.title}</h3>
             <p className="period">{item.period}</p>
-            <div className="description">{item.description}</div>
+            <p className="recruiter-summary">{item.summary}</p>
+            <ul className="highlight-list">
+              {item.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+            <div className="summary-tags" aria-label="Technologies and skills">
+              {item.tags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
+            <details className="story-details">
+              <summary>
+                <span>Read the full internship story</span>
+                <span className="story-toggle-icon" aria-hidden="true">↓</span>
+              </summary>
+              <div className="description">{item.description}</div>
+            </details>
           </article>
         ))}
       </div>

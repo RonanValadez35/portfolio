@@ -20,7 +20,7 @@ export function Bio() {
           arts such as wrestling at Cal Poly, and then Muay Thai and more Brazilian Jiu Jitsu in Austin when I was interning at Amazon.
           I love video games, but haven't had as much time to play them like I used to have. My top 5 games would be Destiny, Halo (for nostalgia, it was my first
           fps I played with my dad too), Elden Ring, Skyrim and Maplestory. I will be surprised if anyone reading this knows Maplestory. It is my guilty pleasure
-          game forsure.  
+          game for sure.
         </p>
       </div>
       <a

@@ -1,12 +1,18 @@
 const education = [
   {
-    school: "Cal Poly San Luis Obispo California",
+    school: "California Polytechnic State University, San Luis Obispo",
     logo: "/images/calpoly-seal.jpg",
+    meta: "Computer Engineering · Transferred Fall 2023 · Graduted December 2025",
+    summary:
+      "Focused my Computer Engineering studies on the software side of the discipline.",
+    highlights: [
+ ],
+    tags: [],
     copy: (
       <>
         <p>
         I transferred to Cal Poly SLO in Fall 2023, majoring in computer engineering.
-          engineering. I remember coming here super nervous because everyone I talked to had said that a four-year university 
+          I remember coming here super nervous because everyone I talked to had said that a four-year university
           was much more difficult than a community college. For me, this was only somewhat
           true. While there were some very difficult classes (OS, networking, embedded systems, and every EE class because I don't like hardware), 
           I also found some classes to be very easy—not because the work was easy, but because I found it interesting. Coming from a community college, 
@@ -30,16 +36,24 @@ const education = [
   {
     school: "Santa Barbara City College",
     logo: "/images/sbcc-logo.jpeg",
+    meta: "Engineering studies · Three years as a full-time student",
+    summary:
+      "Built my engineering foundation at SBCC, where I moved from electrical engineering toward computer engineering and discovered the balance of hardware and software I wanted to pursue at that time.",
+    highlights: [
+      "Began college coursework through dual enrollment during high school.",
+      "Transitioned from electrical engineering to computer engineering.",
+    ],
+    tags: [],
     copy: (
       <>
         <p>
-          I spent three years at SBCC as a full-time student.My first two years were completely online, and my last year was a mix 
+          I spent three years at SBCC as a full-time student. My first two years were completely online, and my last year was a mix
           of online and in-person classes. I technically started at SBCC as a senior in high school through dual enrollment, but I only took two classes each semester.
           Everything was great during senior year until COVID attacked (Last Airbender joke).
           Yes, most of my time at SBCC was spent online, and it was not too great. School was not fun at all. I got to know absolutely no one because every class was online, 
           and some professors were not tech-savvy and would take their frustration out on students. One example was when I was taking a midterm on Zoom, without Proctorio 
           for some reason, and the professor tried to have students clone a repository from GitHub Classroom for the coding section of the exam.
-          We would then push our code, and her automated tests would run and grade it.At least that was her idea. However, she made a mistake when creating the repository, 
+          We would then push our code, and her automated tests would run and grade it. At least that was her idea. However, she made a mistake when creating the repository,
           and no student was able to clone it properly. She then threatened to fail the whole class out of anger, but luckily she didn't.
         </p>
         <p>
@@ -52,7 +66,7 @@ const education = [
           One of the guest speakers was an engineering manager at Raytheon. He talked about his career and how he went from being an engineer to becoming a manager.
           During his talk he uttered two words, computer engineer. I had never heard of this prior to that talk. I was familiar with electrical, mechanical, 
           chemical, software, aerospace, and even nuclear engineering. But I had never heard of computer engineering. I ended up looking it up and found that the 
-          major was a combination of EE and CS.I remember thinking at the time that this was perfect for me because it would allow me to try CS again without 
+          major was a combination of EE and CS. I remember thinking at the time that this was perfect for me because it would allow me to try CS again without
           being solely tied to it. So from that day onward I switched to computer engineering.
         </p>
         <p>
@@ -91,7 +105,25 @@ export function Education() {
               />
             </div>
             <h3>{item.school}</h3>
-            <div className="education-copy">{item.copy}</div>
+            <p className="education-meta">{item.meta}</p>
+            <p className="recruiter-summary">{item.summary}</p>
+            <ul className="highlight-list">
+              {item.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+            <div className="summary-tags" aria-label="Areas of study">
+              {item.tags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+            </div>
+            <details className="story-details">
+              <summary>
+                <span>Read the full education story</span>
+                <span className="story-toggle-icon" aria-hidden="true">↓</span>
+              </summary>
+              <div className="education-copy">{item.copy}</div>
+            </details>
           </article>
         ))}
       </div>
